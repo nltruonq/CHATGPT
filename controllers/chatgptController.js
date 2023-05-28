@@ -5,7 +5,6 @@ const chatgptController = {
         try {
             const content = req.body.content;
             const openai = configOpenai();
-            console.log(openai);
             const response = await openai.createChatCompletion({
                 model: "gpt-3.5-turbo",
                 messages: [{ role: "user", content: content }],
