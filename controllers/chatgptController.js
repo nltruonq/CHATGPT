@@ -17,6 +17,7 @@ const chatgptController = {
             console.log(response);
             return res.status(200).json({
                 message: response.data.choices[0].message.content,
+                type: "chatgpt",
             });
         } catch (error) {
             return res.status(500).json(error.message);
